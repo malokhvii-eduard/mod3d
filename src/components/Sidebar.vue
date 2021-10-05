@@ -7,11 +7,12 @@ import { mdiHelpCircle } from '@mdi/js'
 
 /* Components */
 import Logo from './Logo'
+import ThemeToggle from './ThemeToggle'
 
 export default {
   name: 'Sidebar',
 
-  components: { Logo, VNavigationDrawer },
+  components: { Logo, ThemeToggle, VNavigationDrawer },
 
   data() {
     return { mdiHelpCircle, drawer: true }
@@ -26,6 +27,10 @@ export default {
         <Logo />
       </div>
     </router-link>
+
+    <template #append>
+      <ThemeToggle class="d-flex mx-auto mb-1" />
+    </template>
   </v-navigation-drawer>
 </template>
 
