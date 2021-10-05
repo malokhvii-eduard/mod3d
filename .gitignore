@@ -1,0 +1,8 @@
+.eslintcache
+.idea
+.netlify
+.vscode
+*.code-workspace
+dist
+node_modules
+npm-debug.log*
