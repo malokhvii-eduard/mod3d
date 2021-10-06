@@ -1,4 +1,5 @@
 [submodule "src/assets/icons/si"]
 	path = src/assets/icons/si
 	url = https://github.com/simple-icons/simple-icons.git
+	branch = 5.17.0
   ignore = dirty
