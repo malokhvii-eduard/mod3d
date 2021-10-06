@@ -1,0 +1,9 @@
+[build]
+command = "yarn build"
+publish = "dist"
+
+[build.environment]
+CI = "1"
+
+[build.processing]
+skip_processing = true
