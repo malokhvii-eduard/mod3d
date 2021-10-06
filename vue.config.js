@@ -16,11 +16,17 @@ module.exports = {
       }
     },
 
+    optimization: {
+      splitChunks: {
+        maxAsyncRequests: 20
+      }
+    },
+
     plugins: [
       new GenerateSW({
         swDest: 'sw.js',
         cacheId: 'mod3d',
-        exclude: ['robots.txt', 'sitemap.xml', /manifest\.json$/],
+        exclude: ['robots.txt', 'sitemap.xml', /manifest\.json$/, /favicon.*/, '_redirects', '_headers'],
         skipWaiting: true,
         clientsClaim: true,
         navigateFallback: 'index.html'
@@ -33,6 +39,6 @@ module.exports = {
 
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
-    svgRule.use('vue-loader').loader('vue-loader').end().use('vue-svg-loader').loader('vue-svg-loader')
+    svgRule.use('babel-loader').loader('babel-loader').end().use('vue-svg-loader').loader('vue-svg-loader')
   }
 }
