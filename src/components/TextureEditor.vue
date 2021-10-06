@@ -12,7 +12,7 @@ import VScroll from 'vuescroll/dist/vuescroll-native'
 import ImageEditor from 'tui-image-editor'
 
 /* Icons */
-import { mdiDownload, mdiHexagon, mdiReload, mdiRotate3d, mdiUpload } from '@mdi/js'
+import { mdiDownload, mdiReload, mdiRotate3d, mdiToolbox, mdiUpload } from '@mdi/js'
 
 /* Utilities */
 import { saveAs } from 'file-saver'
@@ -37,9 +37,9 @@ export default {
   data() {
     return {
       mdiDownload,
-      mdiHexagon,
       mdiReload,
       mdiRotate3d,
+      mdiToolbox,
       mdiUpload,
 
       editor: null,
@@ -134,11 +134,11 @@ export default {
       <div ref="editor" />
     </v-sheet>
 
-    <!-- Controls -->
+    <!-- Controls (Toolbox) -->
     <v-speed-dial :direction="controlsDirection" absolute bottom right>
       <template #activator>
         <v-btn aria-label="Controls" color="accent" fab large>
-          <v-icon>{{ mdiHexagon }}</v-icon>
+          <v-icon>{{ mdiToolbox }}</v-icon>
         </v-btn>
       </template>
 
@@ -163,7 +163,9 @@ export default {
 
 <style lang="scss">
 /* Image editor */
+/* purgecss start ignore */
 @import '~tui-image-editor/dist/tui-image-editor.css';
+/* purgecss end ignore */
 
 @mixin fill-color($color) {
   fill: $color !important;

@@ -26,7 +26,7 @@ import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 
 /* Icons */
-import { mdiAutoFix, mdiDownload, mdiHexagon } from '@mdi/js'
+import { mdiDownload, mdiLeadPencil, mdiToolbox } from '@mdi/js'
 
 /* Utilities */
 import { saveAs } from 'file-saver'
@@ -67,11 +67,11 @@ export default {
     const light1 = new PointLight(0xffffff, 0.6)
 
     return {
-      mdiAutoFix,
       mdiDownload,
-      mdiHexagon,
-      hasWebGlSupport,
+      mdiLeadPencil,
+      mdiToolbox,
 
+      hasWebGlSupport,
       animationFrame: null,
       renderer: null,
       scene: null,
@@ -339,16 +339,16 @@ export default {
         </p>
       </div>
 
-      <!-- Controls -->
+      <!-- Controls (Toolbox) -->
       <v-speed-dial bottom direction="top" fixed right>
         <template #activator>
           <v-btn aria-label="Controls" color="accent" fab large>
-            <v-icon>{{ mdiHexagon }}</v-icon>
+            <v-icon>{{ mdiToolbox }}</v-icon>
           </v-btn>
         </template>
 
         <v-btn aria-label="Edit texture" color="accent" fab @click="$emit('edit')">
-          <v-icon>{{ mdiAutoFix }}</v-icon>
+          <v-icon>{{ mdiLeadPencil }}</v-icon>
         </v-btn>
 
         <v-btn v-if="hasWebGlSupport && mesh" aria-label="Export model" color="accent" fab @click="exportScene()">
