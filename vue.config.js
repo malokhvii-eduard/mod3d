@@ -24,7 +24,6 @@ module.exports = {
 
     plugins: [
       new GenerateSW({
-        swDest: 'sw.js',
         cacheId: 'mod3d',
         exclude: ['robots.txt', 'sitemap.xml', /manifest\.json$/, /favicon.*/, '_redirects', '_headers'],
         skipWaiting: true,

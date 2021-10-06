@@ -6,16 +6,14 @@ import vuetify from './plugins/vuetify'
 import './plugins/lodash'
 import './plugins/meta'
 
+/* Assets */
+import './assets/styles/app.scss'
+
 /* App */
 import App from './App'
 import router from './router'
 import store from './store'
-
-/* Assets */
-import './assets/styles/app.scss'
-
-/* Service worker */
-import workbox from './register-sw'
+import workbox from './register-service-worker'
 
 Vue.prototype.$workbox = workbox
 Vue.config.productionTip = false
