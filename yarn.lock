@@ -1220,9 +1220,9 @@
     readdirp "^3.4.0"
 
 "@netlify/config@^15.0.0", "@netlify/config@^15.6.4":
-  version "15.6.5"
-  resolved "https://registry.yarnpkg.com/@netlify/config/-/config-15.6.5.tgz#ca86a28a19b9481151feb272ba3b7008bf293c2b"
-  integrity sha512-Um9DNSJmU+sxvShXFZZgcdwHJqZoWacuMio0oLDCIndrd8eI21SBmigUlvxh1XuNZzrg6xWRTMdkzMaiNQ6vkA==
+  version "15.6.6"
+  resolved "https://registry.yarnpkg.com/@netlify/config/-/config-15.6.6.tgz#9f07777c38ccb60bac69801d61e9ee0070043433"
+  integrity sha512-7LNXL9G2cXfYO2ltFAmHsM2odXcyBceOoKkiGWp0La5HnhdKRItQ2lBgWr/P8pbeCwsAf862Rjkisc6cZbec7A==
   dependencies:
     "@ungap/from-entries" "^0.2.1"
     array-flat-polyfill "^1.0.1"
