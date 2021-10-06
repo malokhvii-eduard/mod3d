@@ -163,9 +163,7 @@ export default {
 
 <style lang="scss">
 /* Image editor */
-/* purgecss start ignore */
 @import '~tui-image-editor/dist/tui-image-editor.css';
-/* purgecss end ignore */
 
 @mixin fill-color($color) {
   fill: $color !important;

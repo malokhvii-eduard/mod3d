@@ -8,6 +8,7 @@ module.exports = {
         styleExtensions: ['.css', '.scss', '.sass', '.styl', '.postcss'],
         safelist: {
           standard: [
+            'body',
             /-(leave|enter|appear)(|-(to|from|active))$/,
             /^(?!(|.*?:)cursor-move).+-move$/,
             /^router-link(|-exact)-active$/
@@ -21,7 +22,9 @@ module.exports = {
             /d-block$/,
             /d-flex$/,
             /d-inline-flex$/,
-            /fade-transition/
+            /^fab-transition.*/,
+            /^fade-transition.*/,
+            /^tui.*/
           ]
         }
       })
