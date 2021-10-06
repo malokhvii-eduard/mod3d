@@ -25,6 +25,7 @@ export default {
 
   beforeCreate() {
     this.$store.dispatch('app/restoreLastTheme')
+    this.$store.dispatch('app/checkWebpSupport')
   }
 }
 </script>
