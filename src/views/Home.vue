@@ -10,18 +10,35 @@ import { mdiMagnify } from '@mdi/js'
 
 /* Components */
 import ModelCard from '@/components/ModelCard'
+import ModelSearch from '@/components/ModelSearch'
 
 export default {
   name: 'HomePage',
 
-  components: { ModelCard, VCol, VContainer, VRow },
+  components: { ModelCard, ModelSearch, VCol, VContainer, VRow },
 
   data() {
-    return { mdiMagnify }
+    return { mdiMagnify, isSearchVisible: true }
   },
 
   computed: {
     ...mapState('content', ['models'])
+  },
+
+  methods: {
+    sortByName(items) {
+      return items.sort((x, y) => (x.name > y.name ? 1 : y.name > x.name ? -1 : 0))
+    },
+    scrollToModelCard({ slug, clear }) {
+      const modelCard = document.getElementById(slug)
+
+      this.$vuetify.goTo(modelCard, {
+        offset: 20,
+        easing: 'easeInCubic'
+      })
+
+      clear()
+    }
   }
 }
 </script>
@@ -30,6 +47,18 @@ export default {
   <section id="home" class="fill-height">
     <v-container fluid>
       <v-row class="mx-auto">
+        <!-- Search for a model card -->
+        <v-col cols="12">
+          <ModelSearch
+            ref="search"
+            :models="sortByName(models)"
+            class="my-3 mx-2"
+            @input="scrollToModelCard"
+            @intersect:visible="isSearchVisible = true"
+            @intersect:outside="isSearchVisible = false"
+          />
+        </v-col>
+
         <!-- Grid with models' cards -->
         <v-col cols="12">
           <v-row class="mx-auto">
