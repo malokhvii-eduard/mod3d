@@ -30,6 +30,13 @@ export default {
   beforeCreate() {
     this.$store.dispatch('app/restoreLastTheme')
     this.$store.dispatch('app/checkWebpSupport')
+  },
+
+  mounted() {
+    const preloader = document.getElementById('preloader')
+    if (preloader) {
+      preloader.remove()
+    }
   }
 }
 </script>
