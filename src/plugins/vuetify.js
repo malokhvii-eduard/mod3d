@@ -6,9 +6,9 @@ import Vuetify from 'vuetify/lib'
 import colors from 'vuetify/lib/util/colors'
 
 /* Icons */
-import siGithub from '@/assets/icons/si/icons/github.svg?inline'
-import siNuxtDotJs from '@/assets/icons/si/icons/nuxtdotjs.svg?inline'
-import siVuetify from '@/assets/icons/si/icons/vuetify.svg?inline'
+import siGithub from '@/assets/icons/si/icons/github.svg'
+import siNuxtDotJs from '@/assets/icons/si/icons/nuxtdotjs.svg'
+import siVuetify from '@/assets/icons/si/icons/vuetify.svg'
 
 Vue.use(Vuetify, { components: {} })
 
