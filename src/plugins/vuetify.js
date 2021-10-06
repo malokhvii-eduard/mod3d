@@ -37,13 +37,17 @@ export default new Vuetify({
         primary: colors.teal.base,
         accent: colors.indigo.base,
         secondary: colors.grey.lighten2,
-        tertiary: colors.grey.darken4
+        tertiary: colors.grey.darken4,
+        'tui-icon': colors.shades.black,
+        'tui-text': colors.shades.black
       },
       dark: {
         primary: colors.teal.base,
         accent: colors.indigo.base,
         secondary: colors.grey.darken4,
-        tertiary: colors.grey.lighten4
+        tertiary: colors.grey.lighten4,
+        'tui-icon': colors.shades.white,
+        'tui-text': colors.shades.white
       }
     }
   }
