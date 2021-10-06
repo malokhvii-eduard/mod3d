@@ -1,0 +1,29 @@
+{
+  "lang": "en",
+  "name": "Mod3D",
+  "short_name": "Mod3D",
+  "description": "A simple 3D editor, that allows you to wrap a 3D model into a texture. The texture is UV mapping, an image, or drawing.",
+  "start_url": "/",
+  "theme_color": "#212121",
+  "background_color": "#212121",
+  "orientation": "any",
+  "display": "standalone",
+  "icons": [
+    { "sizes": "48x48", "purpose": "any", "src": "/regular-icon-48x48.png", "type": "image/png" },
+    { "sizes": "48x48", "purpose": "maskable", "src": "/maskable-icon-48x48.png", "type": "image/png" },
+    { "sizes": "72x72", "purpose": "any", "src": "/regular-icon-72x72.png", "type": "image/png" },
+    { "sizes": "72x72", "purpose": "maskable", "src": "/maskable-icon-72x72.png", "type": "image/png" },
+    { "sizes": "96x96", "purpose": "any", "src": "/regular-icon-96x96.png", "type": "image/png" },
+    { "sizes": "96x96", "purpose": "maskable", "src": "/maskable-icon-96x96.png", "type": "image/png" },
+    { "sizes": "128x128", "purpose": "any", "src": "/regular-icon-128x128.png", "type": "image/png" },
+    { "sizes": "128x128", "purpose": "maskable", "src": "/maskable-icon-128x128.png", "type": "image/png" },
+    { "sizes": "192x192", "purpose": "any", "src": "/regular-icon-192x192.png", "type": "image/png" },
+    { "sizes": "192x192", "purpose": "maskable", "src": "/maskable-icon-192x192.png", "type": "image/png" },
+    { "sizes": "384x384", "purpose": "any", "src": "/regular-icon-384x384.png", "type": "image/png" },
+    { "sizes": "384x384", "purpose": "maskable", "src": "/maskable-icon-384x384.png", "type": "image/png" },
+    { "sizes": "512x512", "purpose": "any", "src": "/regular-icon-512x512.png", "type": "image/png" },
+    { "sizes": "512x512", "purpose": "maskable", "src": "/maskable-icon-512x512.png", "type": "image/png" },
+    { "sizes": "1024x1024", "purpose": "any", "src": "/regular-icon-1024x1024.png", "type": "image/png" },
+    { "sizes": "1024x1024", "purpose": "maskable", "src": "/maskable-icon-1024x1024.png", "type": "image/png" }
+  ]
+}
