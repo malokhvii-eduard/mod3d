@@ -3,7 +3,7 @@
 import { mapState } from 'vuex'
 
 /* Vuetify */
-import { VCol, VContainer, VRow } from 'vuetify/lib'
+import { VBtn, VCol, VContainer, VFabTransition, VIcon, VRow } from 'vuetify/lib'
 
 /* Icons */
 import { mdiMagnify } from '@mdi/js'
@@ -13,9 +13,9 @@ import ModelCard from '@/components/ModelCard'
 import ModelSearch from '@/components/ModelSearch'
 
 export default {
-  name: 'HomePage',
+  name: 'Home',
 
-  components: { ModelCard, ModelSearch, VCol, VContainer, VRow },
+  components: { ModelCard, ModelSearch, VCol, VContainer, VRow, VBtn, VIcon, VFabTransition },
 
   data() {
     return { mdiMagnify, isSearchVisible: true }
@@ -38,6 +38,12 @@ export default {
       })
 
       clear()
+    },
+    scrollToModelSearch() {
+      this.$vuetify.goTo(this.$refs.search, {
+        offset: 150,
+        easing: 'easeInQuad'
+      })
     }
   }
 }
@@ -69,5 +75,22 @@ export default {
         </v-col>
       </v-row>
     </v-container>
+
+    <!-- Scroll to the search, if it isn't visible -->
+    <v-fab-transition>
+      <v-btn
+        v-if="!isSearchVisible"
+        aria-label="Search for a model.."
+        bottom
+        color="accent"
+        fab
+        fixed
+        large
+        right
+        @click="scrollToModelSearch()"
+      >
+        <v-icon>{{ mdiMagnify }}</v-icon>
+      </v-btn>
+    </v-fab-transition>
   </section>
 </template>
