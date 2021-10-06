@@ -41,9 +41,11 @@ export default {
       mdiReload,
       mdiRotate3d,
       mdiUpload,
+
       editor: null,
       previousTexture: null,
       controlsDirection: 'top',
+
       scrollOptions: {
         vuescroll: { detectResize: false },
         scrollPanel: { initialScrollX: '100%' },
@@ -54,7 +56,7 @@ export default {
 
   computed: {
     ...mapState('app', ['isDark']),
-    ...mapState('editor', ['isBusy', 'texture']),
+    ...mapState('editor', ['texture']),
     uvMap() {
       return `${process.env.VUE_APP_ORIGIN}${process.env.BASE_URL}uv/${this.model.slug}.svg`
     },
@@ -84,6 +86,16 @@ export default {
         }
       })
     },
+    resizeEditor() {
+      if (this.editor) {
+        this.controlsDirection = window.innerHeight < CONTROLS_LEFT_DIRECTION_HEIGHT ? 'left' : 'top'
+        this.editor.ui.resizeEditor({
+          uiSize: {
+            height: `${window.innerHeight}px`
+          }
+        })
+      }
+    },
     loadUvMap() {
       this.editor.loadImageFromURL(this.uvMap, 'uvMap')
     },
@@ -92,7 +104,7 @@ export default {
       loadButton.click()
     },
     exportTexture() {
-      this.isBusy = true
+      this.$store.commit('editor/SET_IS_BUSY', true)
 
       setTimeout(() => {
         const texture = this.editor.toDataURL()
@@ -104,22 +116,12 @@ export default {
         const blob = b64toBlob(data, contentType)
         saveAs(blob, `${this.model.name}.png`)
 
-        this.isBusy = false
+        this.$store.commit('editor/SET_IS_BUSY', false)
       }, 500)
     },
     submitTexture() {
       this.saveTexture(() => this.editor.toDataURL())
       this.$emit('view')
-    },
-    onResize() {
-      if (this.editor) {
-        this.controlsDirection = window.innerHeight < CONTROLS_LEFT_DIRECTION_HEIGHT ? 'left' : 'top'
-        this.editor.ui.resizeEditor({
-          uiSize: {
-            height: `${window.innerHeight}px`
-          }
-        })
-      }
     }
   }
 }
@@ -128,7 +130,7 @@ export default {
 <template>
   <v-scroll :ops="scrollOptions" class="fill-height">
     <!-- Image editor -->
-    <v-sheet v-resize="onResize" :class="themeClasses" class="texture-editor fill-height">
+    <v-sheet v-resize="resizeEditor" :class="themeClasses" class="texture-editor fill-height">
       <div ref="editor" />
     </v-sheet>
 
