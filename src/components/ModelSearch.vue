@@ -21,7 +21,7 @@ export default {
   computed: {
     ...mapState('content', ['models']),
     searchIndex() {
-      return this._.sortBy(this.models, (model) => model.name)
+      return [...this.models].sort((a, b) => (a.name > b.name ? 1 : -1))
     }
   },
 

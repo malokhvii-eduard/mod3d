@@ -1,9 +1,11 @@
 /* Vue */
 import Vue from 'vue'
 
+/* Polyfills */
+import './polyfills'
+
 /* Plugins */
 import vuetify from './plugins/vuetify'
-import './plugins/lodash'
 import './plugins/meta'
 
 /* Assets */
