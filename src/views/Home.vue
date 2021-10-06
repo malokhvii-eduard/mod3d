@@ -30,9 +30,7 @@ export default {
       return items.sort((x, y) => (x.name > y.name ? 1 : y.name > x.name ? -1 : 0))
     },
     scrollToModelCard({ slug, clear }) {
-      const modelCard = document.getElementById(slug)
-
-      this.$vuetify.goTo(modelCard, {
+      this.$vuetify.goTo(document.getElementById(slug), {
         offset: 20,
         easing: 'easeInCubic'
       })
@@ -57,7 +55,6 @@ export default {
         <v-col cols="12">
           <ModelSearch
             ref="search"
-            :models="sortByName(models)"
             class="my-3 mx-2"
             @input="scrollToModelCard"
             @intersect:visible="isSearchVisible = true"

@@ -1,4 +1,7 @@
 <script>
+/* Vuex */
+import { mapState } from 'vuex'
+
 /* Vuetify */
 import { Intersect, VAutocomplete, VSheet } from 'vuetify/lib'
 
@@ -9,16 +12,16 @@ export default {
 
   directives: { Intersect },
 
-  props: {
-    models: {
-      type: Array,
-      required: true
-    }
-  },
-
   data() {
     return {
       selectedModel: null
+    }
+  },
+
+  computed: {
+    ...mapState('content', ['models']),
+    searchIndex() {
+      return this._.sortBy(this.models, (model) => model.name)
     }
   },
 
@@ -54,7 +57,7 @@ export default {
       ref="search"
       v-model="selectedModel"
       v-intersect="onIntersect"
-      :items="models"
+      :items="searchIndex"
       aria-label="Search for a model..."
       background-color="secondary"
       clearable

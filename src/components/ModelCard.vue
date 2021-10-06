@@ -73,7 +73,6 @@ export default {
               color="secondary"
               fab
               large
-              nuxt
             >
               <v-icon large>{{ mdiAutoFix }}</v-icon>
             </v-btn>
