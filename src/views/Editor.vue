@@ -1,6 +1,11 @@
 <script>
+/* Vuetify */
+import { VSheet } from 'vuetify/lib'
+
 export default {
   name: 'Editor',
+
+  components: { VSheet },
 
   props: {
     slug: {
@@ -32,5 +37,5 @@ export default {
 </script>
 
 <template>
-  <section id="editor" />
+  <v-sheet class="fill-height" color="secondary" />
 </template>
