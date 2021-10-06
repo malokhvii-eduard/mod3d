@@ -1,17 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "prepare": "husky install",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "eslint --format 'node_modules/eslint-friendly-formatter' . && markdownlint ."
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog",
-      "disableScopeLowerCase": true,
-      "disableSubjectLowerCase": true
-    }
+    "build": "vue-cli-service build --modern",
+    "lint": "eslint --format 'node_modules/eslint-friendly-formatter' . && markdownlint .",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -23,10 +16,11 @@
     "vue-lodash": "^2.1.2",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.2.0",
-    "vuetify": "^2.5.8",
+    "vuetify": "2.5.8",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "3.0.0",
     "@mdi/js": "^6.2.95",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
@@ -42,6 +36,7 @@
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsdoc": "^36.1.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-optimize-regex": "^1.2.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.1.0",
@@ -51,12 +46,19 @@
     "markdownlint-cli": "^0.29.0",
     "netlify-cli": "^6.10.3",
     "prettier": "^2.4.1",
-    "sass": "~1.32.6",
+    "sass": "1.32.6",
     "sass-loader": "^8.0.2",
     "vue-loader": "^15.9.8",
-    "vue-svg-loader": "^0.17.0-beta.2",
+    "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.14",
     "workbox-webpack-plugin": "^6.3.0",
     "workbox-window": "^6.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog",
+      "disableScopeLowerCase": true,
+      "disableSubjectLowerCase": true
+    }
   }
 }
