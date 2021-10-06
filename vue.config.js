@@ -1,6 +1,9 @@
 /* Utilities */
 const path = require('path')
 
+/* Webpack plugins */
+const { GenerateSW } = require('workbox-webpack-plugin')
+
 module.exports = {
   transpileDependencies: ['vuetify', 'intersection-observer'],
 
@@ -11,7 +14,18 @@ module.exports = {
       alias: {
         '@': path.join(__dirname, 'src/')
       }
-    }
+    },
+
+    plugins: [
+      new GenerateSW({
+        swDest: 'sw.js',
+        cacheId: 'mod3d',
+        exclude: ['robots.txt', 'sitemap.xml', /manifest\.json$/],
+        skipWaiting: true,
+        clientsClaim: true,
+        navigateFallback: 'index.html'
+      })
+    ]
   },
 
   chainWebpack(config) {
