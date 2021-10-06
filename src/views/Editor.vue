@@ -18,6 +18,11 @@ export default {
       loading: Loader,
       delay: 0
     }),
+    ModelViewer: () => ({
+      component: import(/* webpackChunkName: "model-viewer" */ '@/components/ModelViewer'),
+      loading: Loader,
+      delay: 0
+    }),
     VSheet
   },
 
@@ -73,6 +78,7 @@ export default {
   <v-sheet class="fill-height" color="secondary">
     <div :style="contentStyles">
       <TextureEditor :model="model" :style="textureEditorStyles" @view="isEditing = false" />
+      <ModelViewer v-if="!isEditing && !isTextureSaving" :model="model" @edit="isEditing = true" />
     </div>
 
     <div :style="loaderStyles">

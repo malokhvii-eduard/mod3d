@@ -12,6 +12,7 @@
     "file-saver": "^2.0.5",
     "idb-keyval": "^6.0.2",
     "supports-webp": "^2.0.1",
+    "three": "^0.133.1",
     "tui-image-editor": "3.11.0",
     "vue": "^2.6.11",
     "vue-meta": "^2.4.0",
