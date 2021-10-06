@@ -329,13 +329,7 @@ export default {
         <p class="text-body-1">
           We're sorry, your browser does not seem to support
           <!-- eslint-disable-next-line-->
-          <a aria-label="WebGL"
-            class="primary--text font-weight-bold text-decoration-none"
-            href="http://khronos.org/webgl/wiki/Getting_a_WebGL_Implementation"
-          >
-            WebGL
-          </a>
-          .
+          <a aria-label="WebGL" class="primary--text font-weight-bold text-decoration-none" href="https://khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">WebGL</a>.
         </p>
       </div>
 
@@ -369,6 +363,7 @@ export default {
   }
 
   &__scene {
+    cursor: move;
     min-width: 900px;
     position: absolute !important;
   }
