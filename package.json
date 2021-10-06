@@ -51,6 +51,7 @@
     "prettier": "^2.4.1",
     "sass": "1.32.6",
     "sass-loader": "^8.0.2",
+    "sitemap-webpack-plugin": "^1.1.1",
     "vue-loader": "^15.9.8",
     "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.14",

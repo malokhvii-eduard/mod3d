@@ -1,7 +1,11 @@
+/* Content */
+const models = require('./src/assets/content/models.json')
+
 /* Utilities */
 const path = require('path')
 
 /* Webpack plugins */
+const SitemapPlugin = require('sitemap-webpack-plugin').default
 const { GenerateSW } = require('workbox-webpack-plugin')
 
 module.exports = {
@@ -23,6 +27,17 @@ module.exports = {
     },
 
     plugins: [
+      new SitemapPlugin({
+        base: process.env.VUE_APP_ORIGIN,
+        paths: [
+          { path: '/', priority: 1 },
+          { path: '/about', priority: 1 },
+          ...models.map((model) => ({ path: `/editor/${model.slug}`, priority: 0.5 }))
+        ],
+        options: {
+          skipgzip: true
+        }
+      }),
       new GenerateSW({
         cacheId: 'mod3d',
         exclude: ['robots.txt', 'sitemap.xml', /manifest\.json$/, /favicon.*/, '_redirects', '_headers'],
