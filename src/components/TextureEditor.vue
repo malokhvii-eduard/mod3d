@@ -135,7 +135,7 @@ export default {
     </v-sheet>
 
     <!-- Controls (Toolbox) -->
-    <v-speed-dial :direction="controlsDirection" absolute bottom right>
+    <v-speed-dial :direction="controlsDirection" absolute bottom open-on-hover right>
       <template #activator>
         <v-btn aria-label="Controls" color="accent" fab large>
           <v-icon>{{ mdiToolbox }}</v-icon>

@@ -334,7 +334,7 @@ export default {
       </div>
 
       <!-- Controls (Toolbox) -->
-      <v-speed-dial bottom direction="top" fixed right>
+      <v-speed-dial bottom direction="top" fixed open-on-hover right>
         <template #activator>
           <v-btn aria-label="Controls" color="accent" fab large>
             <v-icon>{{ mdiToolbox }}</v-icon>
