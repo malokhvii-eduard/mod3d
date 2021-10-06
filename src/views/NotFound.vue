@@ -30,7 +30,7 @@ export default {
               <p class="text-subtitle-2 ma-0">
                 We're sorry, the page you requested could not be found. Please go back to the
                 <!-- eslint-disable-next-line-->
-                <router-link aria-label="Home" class="accent--text font-weight-bold text-decoration-none" to="/">homepage</router-link>.
+                <router-link aria-label="Home" class="primary--text font-weight-bold text-decoration-none" to="/">homepage</router-link>.
               </p>
             </v-col>
           </v-row>
