@@ -1,6 +1,6 @@
 <script>
 /* Vuetify */
-import { VNavigationDrawer } from 'vuetify/lib'
+import { VBtn, VIcon, VNavigationDrawer } from 'vuetify/lib'
 
 /* Icons */
 import { mdiHelpCircle } from '@mdi/js'
@@ -12,7 +12,7 @@ import ThemeToggle from './ThemeToggle'
 export default {
   name: 'Sidebar',
 
-  components: { Logo, ThemeToggle, VNavigationDrawer },
+  components: { Logo, ThemeToggle, VBtn, VIcon, VNavigationDrawer },
 
   data() {
     return { mdiHelpCircle, drawer: true }
@@ -30,6 +30,10 @@ export default {
 
     <template #append>
       <ThemeToggle class="d-flex mx-auto mb-1" />
+
+      <v-btn aria-label="About" class="d-flex mx-auto mb-3" color="tertiary" icon to="/about">
+        <v-icon medium>{{ mdiHelpCircle }}</v-icon>
+      </v-btn>
     </template>
   </v-navigation-drawer>
 </template>
