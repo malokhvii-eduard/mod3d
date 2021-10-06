@@ -17,6 +17,10 @@ export default {
 
   components: { ModelCard, ModelSearch, VCol, VContainer, VRow, VBtn, VIcon, VFabTransition },
 
+  metaInfo: {
+    title: 'Home'
+  },
+
   data() {
     return { mdiMagnify, isSearchVisible: true }
   },

@@ -13,6 +13,10 @@ export default {
 
   components: { Sidebar, VApp, VFadeTransition, VMain },
 
+  metaInfo: {
+    titleTemplate: '%s · Mod3D'
+  },
+
   computed: {
     ...mapState('app', ['isDark'])
   },

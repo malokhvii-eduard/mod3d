@@ -10,6 +10,10 @@ export default {
 
   components: { Logo, VBtn, VCol, VContainer, VDivider, VIcon, VResponsive, VRow },
 
+  metaInfo: {
+    title: 'About'
+  },
+
   data() {
     return {
       socials: [

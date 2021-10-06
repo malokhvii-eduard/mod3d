@@ -4,6 +4,7 @@ import Vue from 'vue'
 /* Plugins */
 import vuetify from './plugins/vuetify'
 import './plugins/lodash'
+import './plugins/meta'
 
 /* App */
 import App from './App'

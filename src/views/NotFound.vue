@@ -7,7 +7,7 @@ export default {
 
   components: { VCol, VContainer, VRow, VResponsive },
 
-  head: {
+  metaInfo: {
     title: '404'
   }
 }

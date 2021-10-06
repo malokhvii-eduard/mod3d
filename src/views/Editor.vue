@@ -9,6 +9,14 @@ export default {
     }
   },
 
+  metaInfo() {
+    if (!this.model) {
+      return {}
+    }
+
+    return { title: `Editor · ${this.model.name}` }
+  },
+
   computed: {
     model() {
       return this.$store.getters['content/getModelBySlug'](this.slug)
