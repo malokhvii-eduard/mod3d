@@ -3,6 +3,7 @@ import Vue from 'vue'
 
 /* Plugins */
 import vuetify from './plugins/vuetify'
+import './plugins/lodash'
 
 /* App */
 import App from './App'
