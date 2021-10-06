@@ -24,6 +24,9 @@ module.exports = {
             /d-inline-flex$/,
             /^fab-transition.*/,
             /^fade-transition.*/,
+            /^v-sheet.*/,
+            /^v-speed-dial.*/,
+            /^v-progress-circular.*/,
             /^tui.*/
           ]
         }
