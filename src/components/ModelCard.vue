@@ -85,23 +85,21 @@ export default {
 
 <style lang="scss">
 .model-card {
-  &__name {
-    &--xs {
-      max-width: 60%;
-    }
+  &__name--xs {
+    max-width: 60%;
+  }
 
-    &--sm {
-      max-width: 70%;
-    }
+  &__name--sm {
+    max-width: 70%;
+  }
 
-    &--md {
-      max-width: 73%;
-    }
+  &__name--md {
+    max-width: 73%;
+  }
 
-    &--xl,
-    &--lg {
-      max-width: 75%;
-    }
+  &__name--xl,
+  &__name--lg {
+    max-width: 75%;
   }
 }
 </style>

@@ -105,10 +105,8 @@ export default {
     fill: currentColor;
   }
 
-  &__divider {
-    .v-divider {
-      border-width: 3px 0 0 !important;
-    }
+  &__divider .v-divider {
+    border-width: 3px 0 0 !important;
   }
 }
 </style>

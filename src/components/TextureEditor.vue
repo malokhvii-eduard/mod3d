@@ -130,7 +130,7 @@ export default {
 <template>
   <v-scroll :ops="scrollOptions" class="fill-height">
     <!-- Image editor -->
-    <v-sheet v-resize="resizeEditor" :class="themeClasses" class="texture-editor fill-height">
+    <v-sheet v-resize="resizeEditor" :class="themeClasses" class="texture-editor fill-height" min-width="960">
       <div ref="editor" />
     </v-sheet>
 
@@ -162,8 +162,12 @@ export default {
 </template>
 
 <style lang="scss">
+/* stylelint-disable selector-max-compound-selectors */
+
 /* Image editor */
+/* stylelint-disable */
 @import '~tui-image-editor/dist/tui-image-editor.css';
+/* stylelint-enable */
 
 @mixin fill-color($color) {
   fill: $color !important;
@@ -171,9 +175,8 @@ export default {
 }
 
 .texture-editor {
-  width: 100%;
   height: 100%;
-  min-width: 960px;
+  width: 100%;
 
   .tui-image-editor-header {
     display: none !important;
@@ -200,7 +203,7 @@ export default {
     background-color: var(--v-secondary-base) !important;
   }
 
-  .tui-image-editor-container div.tui-colorpicker-clearfix {
+  .tui-image-editor-container .tui-colorpicker-clearfix {
     margin: 0 100px !important;
   }
 

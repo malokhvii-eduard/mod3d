@@ -320,7 +320,7 @@ export default {
 
 <template>
   <v-scroll :ops="scrollOptions" class="fill-height">
-    <v-sheet v-resize="resizeRenderer" class="model-viewer fill-height" color="secondary">
+    <v-sheet v-resize="resizeRenderer" class="model-viewer fill-height" color="secondary" min-width="960">
       <!-- Scene -->
       <canvas v-if="hasWebGlSupport" ref="canvas" class="model-viewer__scene" />
 
@@ -364,7 +364,6 @@ export default {
 
   &__scene {
     cursor: move;
-    min-width: 900px;
     position: absolute !important;
   }
 }
