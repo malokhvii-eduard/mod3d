@@ -19,6 +19,7 @@ module.exports = {
     'no-console': isProduction ? 'warn' : 'off',
     'no-debugger': isProduction ? 'warn' : 'off',
     'prettier/prettier': 'error',
+    'sonarjs/no-duplicate-string': 'off',
     'vue/attributes-order': ['error'],
     'vue/no-v-html': 'off'
   }
