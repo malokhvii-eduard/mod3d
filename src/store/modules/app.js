@@ -1,5 +1,5 @@
 /* IndexedDB */
-import localForage from 'localforage'
+import { get, set } from 'idb-keyval'
 
 /* WebP detection */
 import supportsWebp from 'supports-webp'
@@ -17,20 +17,17 @@ const mutations = {
 
 const actions = {
   async restoreLastTheme({ commit }) {
-    let isDark = await localForage.getItem('isDark')
-    if (isDark === null) {
+    let isDark = await get('isDark')
+    if (isDark == null) {
       isDark = true
-      await localForage.setItem('isDark', isDark)
+      await set('isDark', isDark)
     }
 
-    /* Default theme is `dark` */
-    if (!isDark) {
-      commit('SET_IS_DARK', isDark)
-    }
+    commit('SET_IS_DARK', isDark)
   },
   async toggleTheme({ state, commit }) {
     commit('SET_IS_DARK', !state.isDark)
-    await localForage.setItem('isDark', state.isDark)
+    await set('isDark', state.isDark)
   },
   async checkWebpSupport({ state, commit }) {
     if (state.hasWebpSupport == null) {
