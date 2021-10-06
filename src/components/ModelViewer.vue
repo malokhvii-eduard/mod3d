@@ -1,6 +1,6 @@
 <script>
 /* Vuex */
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 /* Vuetify */
 import { Resize, VBtn, VIcon, VSheet, VSpeedDial } from 'vuetify/lib'
@@ -111,7 +111,7 @@ export default {
   },
 
   mounted() {
-    this.$store.commit('editor/SET_IS_BUSY', true)
+    this.SET_IS_BUSY(true)
 
     this.renderer = this.createRenderer()
     this.camera = this.createCamera()
@@ -148,6 +148,7 @@ export default {
   },
 
   methods: {
+    ...mapMutations('editor', ['SET_IS_BUSY']),
     getCanvasSize() {
       const size = { width: this.$el.clientWidth, height: this.$el.clientHeight }
       if (size.width < SCENE_MIN_WIDTH) {
@@ -227,10 +228,10 @@ export default {
           const material = this.createTextureMaterial(texture)
           const skinnedMesh = new Mesh(this.mesh.geometry, material)
           this.mesh.add(skinnedMesh)
-          this.$store.commit('editor/SET_IS_BUSY', false)
+          this.SET_IS_BUSY(false)
         })
       } else {
-        this.$store.commit('editor/SET_IS_BUSY', false)
+        this.SET_IS_BUSY(false)
       }
     },
     animateRenderer() {
@@ -255,7 +256,7 @@ export default {
     },
     exportScene() {
       if (this.scene) {
-        this.$store.commit('editor/SET_IS_BUSY', true)
+        this.SET_IS_BUSY(true)
         this.lights.forEach((light) => this.scene.remove(light))
         new GLTFExporter().parse(this.scene, this.saveScene, { binary: true })
       }
@@ -265,7 +266,7 @@ export default {
       saveAs(blob, `${this.model.name}.glb`)
 
       this.scene.add(...this.lights)
-      this.$store.commit('editor/SET_IS_BUSY', false)
+      this.SET_IS_BUSY(false)
     },
     /* Dragging */
     calculateDeltaRotationQuaternion(deltaMove) {

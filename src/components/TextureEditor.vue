@@ -1,6 +1,6 @@
 <script>
 /* Vuex */
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapMutations, mapState } from 'vuex'
 
 /* Vuetify */
 import { Resize, VBtn, VIcon, VSheet, VSpeedDial } from 'vuetify/lib'
@@ -43,7 +43,6 @@ export default {
       mdiUpload,
 
       editor: null,
-      previousTexture: null,
       controlsDirection: 'top',
 
       scrollOptions: {
@@ -76,13 +75,14 @@ export default {
   },
 
   methods: {
+    ...mapMutations('editor', ['SET_IS_BUSY']),
     ...mapActions('editor', ['saveTexture']),
     createEditor() {
       return new ImageEditor(this.$refs.editor, {
         usageStatistics: false,
         includeUI: {
           uiSize: { height: `${window.innerHeight}px` },
-          loadImage: { path: this.uvMap, name: 'uvMap' }
+          loadImage: { path: this.uvMap, name: '__uvMap' }
         }
       })
     },
@@ -97,15 +97,19 @@ export default {
       }
     },
     loadUvMap() {
-      this.editor.loadImageFromURL(this.uvMap, 'uvMap')
+      this.SET_IS_BUSY(true)
+      this.editor.loadImageFromURL(this.uvMap, '__uvMap').then(() => {
+        this.editor.clearRedoStack()
+        this.editor.clearUndoStack()
+        this.SET_IS_BUSY(false)
+      })
     },
     loadTexture() {
       const loadButton = document.querySelector('.tui-image-editor-load-btn')
       loadButton.click()
     },
     exportTexture() {
-      this.$store.commit('editor/SET_IS_BUSY', true)
-
+      this.SET_IS_BUSY(true)
       setTimeout(() => {
         const texture = this.editor.toDataURL()
 
@@ -116,7 +120,7 @@ export default {
         const blob = b64toBlob(data, contentType)
         saveAs(blob, `${this.model.name}.png`)
 
-        this.$store.commit('editor/SET_IS_BUSY', false)
+        this.SET_IS_BUSY(false)
       }, 500)
     },
     submitTexture() {
