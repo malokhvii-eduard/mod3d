@@ -20,6 +20,7 @@
 [![stylelint](https://img.shields.io/badge/linter-stylelint-263238?style=flat)][github-stylelint]
 [![markdownlint](https://img.shields.io/badge/linter-markdownlint-000?style=flat)][github-markdownlint]
 [![commitlint](https://img.shields.io/badge/linter-commitlint-F05032?style=flat)][github-commitlint]
+![CI Workflow](https://github.com/malokhvii-eduard/mod3d/actions/workflows/main.yml/badge.svg)
 ![Netlify Status](https://api.netlify.com/api/v1/badges/8c5c3207-5cc8-4b2f-9ae1-425e24003fb2/deploy-status)
 
   </p>
@@ -88,6 +89,7 @@ promise-based [key-value store][github-idb-keyval] implemented with [IndexedDB][
 [![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=flat)][blender]
 [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat)][git-scm]
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)][github]
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff&style=flat)][github-actions]
 <!-- markdownlint-enable MD013 -->
 
 ## :pray: Contributing
@@ -118,6 +120,7 @@ appreciated**.
 [mdn-webgl]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
 
 <!-- Github links -->
+[github-actions]: https://docs.github.com/en/actions
 [github-babel]: https://github.com/babel/babel
 [github-commitizen]: https://github.com/commitizen/cz-cli
 [github-commitlint]: https://github.com/conventional-changelog/commitlint
