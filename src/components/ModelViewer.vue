@@ -88,8 +88,8 @@ export default {
         bar: { background: this.$vuetify.theme.currentTheme.primary }
       },
 
-      isDragging: false,
-      previousDraggingPosition: new Vector2()
+      isRotating: false,
+      previousRotatingPosition: new Vector2()
     }
   },
 
@@ -120,12 +120,12 @@ export default {
 
     const { canvas } = this.$refs
 
-    canvas.addEventListener('mousedown', this.enableMouseDragging)
-    canvas.addEventListener('mouseup', this.disableMouseDragging)
+    canvas.addEventListener('mousedown', this.enableMouseRotating)
+    canvas.addEventListener('mouseup', this.disableMouseRotating)
     canvas.addEventListener('mousemove', this.onMouseMove)
 
-    canvas.addEventListener('touchstart', this.enableTouchDragging)
-    canvas.addEventListener('touchend', this.disableTouchDragging)
+    canvas.addEventListener('touchstart', this.enableTouchRotating)
+    canvas.addEventListener('touchend', this.disableTouchRotating)
     canvas.addEventListener('touchmove', this.onTouchMove)
 
     this.animateRenderer()
@@ -136,12 +136,12 @@ export default {
 
     const { canvas } = this.$refs
 
-    canvas.removeEventListener('mousedown', this.enableMouseDragging)
-    canvas.removeEventListener('mouseup', this.disableMouseDragging)
+    canvas.removeEventListener('mousedown', this.enableMouseRotating)
+    canvas.removeEventListener('mouseup', this.disableMouseRotating)
     canvas.removeEventListener('mousemove', this.onMouseMove)
 
-    canvas.removeEventListener('touchstart', this.enableTouchDragging)
-    canvas.removeEventListener('touchend', this.disableTouchDragging)
+    canvas.removeEventListener('touchstart', this.enableTouchRotating)
+    canvas.removeEventListener('touchend', this.disableTouchRotating)
     canvas.removeEventListener('touchmove', this.onTouchMove)
 
     this.renderer.dispose()
@@ -268,42 +268,42 @@ export default {
       this.scene.add(...this.lights)
       this.SET_IS_BUSY(false)
     },
-    /* Dragging */
+    /* Rotating */
     calculateDeltaRotationQuaternion(deltaMove) {
       return new Quaternion().setFromEuler(new Euler(toRadians(deltaMove.y), toRadians(deltaMove.x), 0, 'XYZ'))
     },
     rotateMesh(offset) {
       const deltaMove = new Vector2()
-      deltaMove.subVectors(offset, this.previousDraggingPosition)
+      deltaMove.subVectors(offset, this.previousRotatingPosition)
 
-      if (this.mesh && this.isDragging) {
+      if (this.mesh && this.isRotating) {
         const deltaRotationQuaternion = this.calculateDeltaRotationQuaternion(deltaMove)
         this.mesh.quaternion.multiplyQuaternions(deltaRotationQuaternion, this.mesh.quaternion)
       }
 
-      this.previousDraggingPosition = offset
+      this.previousRotatingPosition = offset
     },
-    /* Mouse dragging */
-    enableMouseDragging() {
-      this.isDragging = true
+    /* Rotating via mouse */
+    enableMouseRotating() {
+      this.isRotating = true
     },
-    disableMouseDragging() {
-      this.isDragging = false
+    disableMouseRotating() {
+      this.isRotating = false
     },
     onMouseMove(event) {
       const offset = new Vector2(event.offsetX, event.offsetY)
       this.rotateMesh(offset)
     },
-    /* Touch dragging */
-    enableTouchDragging(event) {
+    /* Rotating via touch */
+    enableTouchRotating(event) {
       if (event.targetTouches.length === MESH_ROTATE_TOUCHES) {
         event.preventDefault()
         event.stopPropagation()
-        this.isDragging = true
+        this.isRotating = true
       }
     },
-    disableTouchDragging(event) {
-      this.isDragging = event.targetTouches.length !== MESH_ROTATE_TOUCHES
+    disableTouchRotating(event) {
+      this.isRotating = event.targetTouches.length !== MESH_ROTATE_TOUCHES
     },
     onTouchMove(event) {
       if (event.touches.length === MESH_ROTATE_TOUCHES) {
