@@ -40,23 +40,28 @@
 - *[Single Page Application (SPA)][mdn-spa]* &mdash; is presented to the user
 through a single HTML page to be more responsive and to more closely replicate
 a desktop application or a native app
-- *Mobile-friendly*
-- *Installable [Progressive Web App (PWA)][mdn-pwa]*
-- *Restores selected theme after page reload or app close from
-[IndexedDB][mdn-indexeddb]*
+- Mobile-friendly
+- Installable *[Progressive Web App (PWA)][mdn-pwa]*
+- Rotating a model in editor. The rotating is implemented via
+*[mouse][mdn-mouse-events]* (right-click) or *[touch][mdn-touch-events]* (2
+touches at the same time in any place of the scene)
+- Restores selected theme after page reload or app close from
+*[IndexedDB][mdn-indexeddb]*
 - *[Open Graph Protocol][open-graph-protocol], [Twitter Cards][twitter-cards]*
 - *[Material Design][material-design],
 [Material Design Icons][material-design-icons],
 [Simple Icons][github-simple-icons]*
-- *Uses*: a cross-browser [WebGL][mdn-webgl] based [3D library][github-three], a
-full-featured [image editor][github-tui-image-editor], a super-simple
-promise-based [key-value store][github-idb-keyval] implemented with [IndexedDB][mdn-indexeddb],
-[LQIP][github-lqip] placeholders, a [tool][github-purgecss] to remove unused CSS
-- *State management via [Vuex][github-vuex]*
-- *Git hooks with [husky][github-husky]*
-- *Formatter & Linters:* [Prettier][github-prettier], [ESLint][github-eslint],
+- Uses: a cross-browser *[WebGL][mdn-webgl]* based
+*[3D library][github-three]*, a full-featured
+*[image editor][github-tui-image-editor]*, a super-simple promise-based
+*[key-value store][github-idb-keyval]* implemented with
+*[IndexedDB][mdn-indexeddb]*, *[LQIP][github-lqip]* placeholders, a
+*[tool][github-purgecss]* to remove unused CSS
+- State management via *[Vuex][github-vuex]*
+- Git hooks with *[husky][github-husky]*
+- Formatter & Linters: *[Prettier][github-prettier], [ESLint][github-eslint],
 [stylelint][github-stylelint], [commitlint][github-commitlint],
-[markdownlint][github-markdownlint]
+[markdownlint][github-markdownlint]*
 
 ## :hammer_and_wrench: Tech Stack
 
@@ -116,8 +121,10 @@ appreciated**.
 <!-- markdownlint-disable MD013 -->
 <!-- MDN Web Docs links -->
 [mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+[mdn-mouse-events]: https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events
 [mdn-pwa]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
 [mdn-spa]: https://developer.mozilla.org/en-US/docs/Glossary/SPA
+[mdn-touch-events]: https://developer.mozilla.org/en-US/docs/Web/API/Touch_events
 [mdn-webgl]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
 
 <!-- Github links -->
