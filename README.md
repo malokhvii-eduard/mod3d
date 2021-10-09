@@ -20,6 +20,7 @@
 [![stylelint](https://img.shields.io/badge/linter-stylelint-263238?style=flat)][github-stylelint]
 [![markdownlint](https://img.shields.io/badge/linter-markdownlint-000?style=flat)][github-markdownlint]
 [![commitlint](https://img.shields.io/badge/linter-commitlint-F05032?style=flat)][github-commitlint]
+![Last Commit](https://img.shields.io/github/last-commit/malokhvii-eduard/mod3d)
 ![CI Workflow](https://github.com/malokhvii-eduard/mod3d/actions/workflows/main.yml/badge.svg)
 ![Netlify Status](https://api.netlify.com/api/v1/badges/8c5c3207-5cc8-4b2f-9ae1-425e24003fb2/deploy-status)
 
