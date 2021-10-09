@@ -7,7 +7,7 @@ import colors from 'vuetify/lib/util/colors'
 
 /* Icons */
 import siGithub from '@/assets/icons/si/icons/github.svg'
-import siNuxtDotJs from '@/assets/icons/si/icons/nuxtdotjs.svg'
+import siVueDotJs from '@/assets/icons/si/icons/vuedotjs.svg'
 import siVuetify from '@/assets/icons/si/icons/vuetify.svg'
 
 Vue.use(Vuetify, { components: {} })
@@ -21,7 +21,7 @@ export default new Vuetify({
     iconfont: 'mdiSvg',
     values: {
       siGithub: { component: siGithub },
-      siNuxtDotJs: { component: siNuxtDotJs },
+      siVueDotJs: { component: siVueDotJs },
       siVuetify: { component: siVuetify }
     }
   },

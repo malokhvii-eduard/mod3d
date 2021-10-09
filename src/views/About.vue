@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       socials: [
-        { name: 'Nuxt.js', icon: '$siNuxtDotJs', link: 'https://github.com/nuxt/nuxt.js' },
+        { name: 'Vue.js', icon: '$siVueDotJs', link: 'https://github.com/vuejs/vue' },
         { name: 'Vuetify', icon: '$siVuetify', link: 'https://github.com/vuetifyjs/vuetify' },
         { name: 'GitHub', icon: '$siGithub', link: 'https://github.com/malokhvii-eduard/mod3d' }
       ]
@@ -68,9 +68,9 @@ export default {
                   class="mx-1"
                   color="tertiary"
                   icon
-                  x-large
+                  large
                 >
-                  <v-icon class="about__icon" large>{{ social.icon }}</v-icon>
+                  <v-icon class="about__icon" medium>{{ social.icon }}</v-icon>
                 </v-btn>
               </div>
             </v-col>
