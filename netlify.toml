@@ -7,3 +7,9 @@ CI = "1"
 
 [build.processing]
 skip_processing = true
+
+[context.production.environment]
+VUE_APP_ORIGIN = "https://mod3d.netlify.app"
+
+[context.staging.environment]
+VUE_APP_ORIGIN = "https://staging--mod3d.netlify.app"
