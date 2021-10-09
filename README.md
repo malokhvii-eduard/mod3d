@@ -40,14 +40,14 @@
 - *[Single Page Application (SPA)][mdn-spa]* &mdash; is presented to the user
 through a single HTML page to be more responsive and to more closely replicate
 a desktop application or a native app
+- *Mobile-friendly*
+- *Installable [Progressive Web App (PWA)][mdn-pwa]*
+- *Restores selected theme after page reload or app close from
+[IndexedDB][mdn-indexeddb]*
+- *[Open Graph Protocol][open-graph-protocol], [Twitter Cards][twitter-cards]*
 - *[Material Design][material-design],
 [Material Design Icons][material-design-icons],
 [Simple Icons][github-simple-icons]*
-- *Mobile-friendly*
-- *Installable [Progressive Web App (PWA)][mdn-pwa]*
-- *[Open Graph Protocol][open-graph-protocol], [Twitter Cards][twitter-cards]*
-- *Restores selected theme after page reload or app close from
-[IndexedDB][mdn-indexeddb]*
 - *Uses*: a cross-browser [WebGL][mdn-webgl] based [3D library][github-three], a
 full-featured [image editor][github-tui-image-editor], a super-simple
 promise-based [key-value store][github-idb-keyval] implemented with [IndexedDB][mdn-indexeddb],
