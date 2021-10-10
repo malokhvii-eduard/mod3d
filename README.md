@@ -19,8 +19,7 @@
 [![ESLint](https://img.shields.io/badge/linter-eslint-4B32C3?style=flat)][github-eslint]
 [![stylelint](https://img.shields.io/badge/linter-stylelint-263238?style=flat)][github-stylelint]
 [![markdownlint](https://img.shields.io/badge/linter-markdownlint-000?style=flat)][github-markdownlint]
-[![commitlint](https://img.shields.io/badge/linter-commitlint-F05032?style=flat)][github-commitlint]
-![Last Commit](https://img.shields.io/github/last-commit/malokhvii-eduard/mod3d)
+[![commitlint](https://img.shields.io/badge/linter-commitlint-F7B93E?style=flat)][github-commitlint]
 ![CI Workflow](https://github.com/malokhvii-eduard/mod3d/actions/workflows/main.yml/badge.svg)
 ![Netlify Status](https://api.netlify.com/api/v1/badges/8c5c3207-5cc8-4b2f-9ae1-425e24003fb2/deploy-status)
 
@@ -42,26 +41,21 @@ through a single HTML page to be more responsive and to more closely replicate
 a desktop application or a native app
 - Mobile-friendly
 - Installable *[Progressive Web App (PWA)][mdn-pwa]*
+- Dark & Light theme
+- Different kinds of texture: image, figure, UV mapping with borders (default)
 - Rotating a model in editor. The rotating is implemented via
 *[mouse][mdn-mouse-events]* (right-click) or *[touch][mdn-touch-events]* (2
 touches at the same time in any place of the scene)
+- Exporting a model with a texture in *[glTF (GL Transmission Format)][github-gltf]*
 - Restores selected theme after page reload or app close from
 *[IndexedDB][mdn-indexeddb]*
 - *[Open Graph Protocol][open-graph-protocol], [Twitter Cards][twitter-cards]*
-- *[Material Design][material-design],
-[Material Design Icons][material-design-icons],
-[Simple Icons][github-simple-icons]*
 - Uses: a cross-browser *[WebGL][mdn-webgl]* based
 *[3D library][github-three]*, a full-featured
 *[image editor][github-tui-image-editor]*, a super-simple promise-based
 *[key-value store][github-idb-keyval]* implemented with
 *[IndexedDB][mdn-indexeddb]*, *[LQIP][github-lqip]* placeholders, a
 *[tool][github-purgecss]* to remove unused CSS
-- State management via *[Vuex][github-vuex]*
-- Git hooks with *[husky][github-husky]*
-- Formatter & Linters: *[Prettier][github-prettier], [ESLint][github-eslint],
-[stylelint][github-stylelint], [commitlint][github-commitlint],
-[markdownlint][github-markdownlint]*
 
 ## :hammer_and_wrench: Tech Stack
 
@@ -74,6 +68,7 @@ touches at the same time in any place of the scene)
 ![Sass](https://img.shields.io/badge/Sass-C69?logo=sass&logoColor=fff&style=flat)
 ![SVG](https://img.shields.io/badge/SVG-FFB13B?logo=svg&logoColor=fff&style=flat)
 [![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=fff&style=flat)][github-vue]
+[![Vuex](https://img.shields.io/badge/Vuex-4FC08D?logo=vuedotjs&logoColor=fff&style=flat)][github-vuex]
 [![Vuetify](https://img.shields.io/badge/Vuetify-1867C0?logo=vuetify&logoColor=fff&style=flat)][github-vuetify]
 [![WebGL](https://img.shields.io/badge/WebGL-900?logo=webgl&logoColor=fff&style=flat)][mdn-webgl]
 [![Three.js](https://img.shields.io/badge/Three.js-000?logo=threedotjs&logoColor=fff&style=flat)][github-three]
@@ -82,6 +77,8 @@ touches at the same time in any place of the scene)
 [![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=fff&style=flat)][github-prettier]
 [![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=fff&style=flat)][github-eslint]
 [![stylelint](https://img.shields.io/badge/stylelint-263238?logo=stylelint&logoColor=fff&style=flat)][github-stylelint]
+[![commitlint](https://img.shields.io/badge/commitlint-F7B93E?logo=c&logoColor=000&style=flat)][github-commitlint]
+[![markdownlint](https://img.shields.io/badge/markdownlint-000?logo=markdown&logoColor=fff&style=flat)][github-markdownlint]
 [![SonarJS](https://img.shields.io/badge/SonarJS-CB3032?logo=sonarsource&logoColor=fff&style=flat)][github-sonarjs]
 [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?logo=postcss&logoColor=fff&style=flat)][github-postcss]
 [![PurgeCSS](https://img.shields.io/badge/PurgeCSS-14161A?logo=purgecss&logoColor=fff&style=flat)][github-purgecss]
@@ -94,6 +91,7 @@ touches at the same time in any place of the scene)
 [![Shields.io](https://img.shields.io/badge/Shields.io-000?logo=shieldsdotio&logoColor=fff&style=flat)][shields]
 [![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=flat)][blender]
 [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat)][git-scm]
+[![husky](https://img.shields.io/badge/husky-8D6748?logo=git&logoColor=fff&style=flat)][github-husky]
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)][github]
 [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff&style=flat)][github-actions]
 <!-- markdownlint-enable MD013 -->
@@ -133,6 +131,7 @@ appreciated**.
 [github-commitizen]: https://github.com/commitizen/cz-cli
 [github-commitlint]: https://github.com/conventional-changelog/commitlint
 [github-eslint]: https://github.com/eslint/eslint
+[github-gltf]: https://github.com/KhronosGroup/glTF
 [github-husky]: https://github.com/typicode/husky
 [github-idb-keyval]: https://github.com/jakearchibald/idb-keyval
 [github-lqip]: https://github.com/zouhir/lqip
