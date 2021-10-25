@@ -36,26 +36,26 @@
 
 ## :tada: Features
 
-- *[Single Page Application (SPA)][mdn-spa]* &ndash; is presented to the user
+- [Single Page Application (SPA)][mdn-spa] &ndash; is presented to the user
 through a single HTML page to be more responsive and to more closely replicate
 a desktop application or a native app
 - Mobile-friendly
-- Installable *[Progressive Web App (PWA)][mdn-pwa]*
+- Installable [Progressive Web App (PWA)][mdn-pwa]
 - Dark & Light theme
 - Different kinds of texture: image, figure, UV mapping with borders (default)
 - Rotating a model in editor. The rotating is implemented via
-*[mouse][mdn-mouse-events]* (right-click) or *[touch][mdn-touch-events]* (2
+[mouse][mdn-mouse-events] (right-click) or [touch][mdn-touch-events] (2
 touches at the same time in any place of the scene)
-- Exporting a model with a texture in *[glTF (GL Transmission Format)][github-gltf]*
+- Exporting a model with a texture in [glTF (GL Transmission Format)][github-gltf]
 - Restores selected theme after page reload or app close from
-*[IndexedDB][mdn-indexeddb]*
-- *[Open Graph Protocol][open-graph-protocol], [Twitter Cards][twitter-cards]*
-- Uses: a cross-browser *[WebGL][mdn-webgl]* based
-*[3D library][github-three]*, a full-featured
-*[image editor][github-tui-image-editor]*, a super-simple promise-based
-*[key-value store][github-idb-keyval]* implemented with
-*[IndexedDB][mdn-indexeddb]*, *[LQIP][github-lqip]* placeholders, a
-*[tool][github-purgecss]* to remove unused CSS
+[IndexedDB][mdn-indexeddb]
+- [Open Graph Protocol][open-graph-protocol], [Twitter Cards][twitter-cards]
+- Uses: a cross-browser [WebGL][mdn-webgl] based
+[3D library][github-three], a full-featured
+[image editor][github-tui-image-editor], a super-simple promise-based
+[key-value store][github-idb-keyval] implemented with
+[IndexedDB][mdn-indexeddb], [LQIP][github-lqip] placeholders, a
+[tool][github-purgecss] to remove unused CSS
 
 ## :hammer_and_wrench: Tech Stack
 
