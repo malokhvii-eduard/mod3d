@@ -36,7 +36,7 @@
 
 ## :tada: Features
 
-- *[Single Page Application (SPA)][mdn-spa]* &mdash; is presented to the user
+- *[Single Page Application (SPA)][mdn-spa]* &ndash; is presented to the user
 through a single HTML page to be more responsive and to more closely replicate
 a desktop application or a native app
 - Mobile-friendly
@@ -96,7 +96,7 @@ touches at the same time in any place of the scene)
 [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff&style=flat)][github-actions]
 <!-- markdownlint-enable MD013 -->
 
-## :pray: Contributing
+## :writing_hand: Contributing
 
 :+1::tada: *First off, thanks for taking the time to contribute!* :tada::+1:
 
@@ -111,6 +111,10 @@ appreciated**.
 4. Commit your *Changes* (`git commit -m 'Add awesome feature'`)
 5. Push to the *Branch* (`git push origin feature/awesome-feature`)
 6. Open a *Pull Request*
+
+## :sparkling_heart: Like this project ?
+
+Leave a :star: if you think this project is cool or useful for you.
 
 ## :warning: License
 
