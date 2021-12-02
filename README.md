@@ -13,8 +13,8 @@
   <p id="shields" align="center" markdown="1">
 
 [![License](https://img.shields.io/badge/license-MIT-3178C6?style=flat)](LICENSE)
-[![Commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen)][github-commitizen]
 [![Husky](https://img.shields.io/badge/husky-enabled-brightgreen?style=flat)][github-husky]
+[![Commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen)][github-commitizen]
 [![Style Guide](https://img.shields.io/badge/code%20style-standard-F7DF1E?style=flat)][github-standard]
 [![ESLint](https://img.shields.io/badge/linter-eslint-4B32C3?style=flat)][github-eslint]
 [![stylelint](https://img.shields.io/badge/linter-stylelint-263238?style=flat)][github-stylelint]
@@ -91,7 +91,6 @@ touches at the same time in any place of the scene)
 [![Shields.io](https://img.shields.io/badge/Shields.io-000?logo=shieldsdotio&logoColor=fff&style=flat)][shields]
 [![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=flat)][blender]
 [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat)][git-scm]
-[![husky](https://img.shields.io/badge/husky-8D6748?logo=git&logoColor=fff&style=flat)][github-husky]
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)][github]
 [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff&style=flat)][github-actions]
 <!-- markdownlint-enable MD013 -->
