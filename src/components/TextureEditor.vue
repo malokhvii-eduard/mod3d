@@ -132,14 +132,16 @@ export default {
 </script>
 
 <template>
-  <v-scroll :ops="scrollOptions" class="fill-height">
-    <!-- Image editor -->
-    <v-sheet v-resize="resizeEditor" :class="themeClasses" class="texture-editor fill-height" min-width="960">
-      <div ref="editor" />
-    </v-sheet>
+  <v-sheet class="fill-height">
+    <v-scroll :ops="scrollOptions" class="fill-height">
+      <!-- Image editor -->
+      <v-sheet v-resize="resizeEditor" :class="themeClasses" class="texture-editor fill-height" min-width="960">
+        <div ref="editor" />
+      </v-sheet>
+    </v-scroll>
 
     <!-- Controls (Toolbox) -->
-    <v-speed-dial :direction="controlsDirection" absolute bottom open-on-hover right>
+    <v-speed-dial :direction="controlsDirection" fixed bottom open-on-hover right>
       <template #activator>
         <v-btn aria-label="Controls" color="accent" fab large>
           <v-icon>{{ mdiToolbox }}</v-icon>
@@ -162,7 +164,7 @@ export default {
         <v-icon>{{ mdiReload }}</v-icon>
       </v-btn>
     </v-speed-dial>
-  </v-scroll>
+  </v-sheet>
 </template>
 
 <style lang="scss">
