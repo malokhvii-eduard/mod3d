@@ -47,9 +47,9 @@ export default {
               <p class="text-subtitle-1">
                 🎨 A simple
                 <!-- eslint-disable-next-line-->
-                <span class="primary--text">3D editor</span>, that allows you to wrap a
+                <span class="primary--text">3D editor</span>, that allows wrapping a
                 <span class="primary--text">3D model</span>
-                into a texture. As a texture there could be used UV mappings, images or figures. Back to the
+                into a texture. As a texture, there could be used UV mappings, images, or figures. Back to the
                 <!-- eslint-disable-next-line-->
                 <router-link aria-label="Home" class="primary--text font-weight-bold text-decoration-none" to="/">homepage</router-link>.
               </p>
