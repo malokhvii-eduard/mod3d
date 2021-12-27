@@ -1,13 +1,31 @@
 {
   "private": true,
   "scripts": {
+    "postinstall": "is-ci || husky install",
+    "prepare": "is-ci || husky install",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
-    "lint:javascript": "eslint --format 'node_modules/eslint-friendly-formatter' .",
+    "lint:javascript": "eslint --format 'node_modules/eslint-friendly-formatter' **/*.{js,vue}",
     "lint:styles": "stylelint **/*.{vue,htm,html,css,sss,less,scss,sass}",
     "lint:markdown": "markdownlint .",
-    "lint": "run-p lint:*",
-    "postinstall": "husky install"
+    "lint": "run-p lint:*"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog",
+      "disableScopeLowerCase": true,
+      "disableSubjectLowerCase": true
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.md": "markdownlint",
+    "*.{js,vue}": "eslint --format 'node_modules/eslint-friendly-formatter'",
+    "*.{html,css,sss,less,scss,sass}": "stylelint"
   },
   "dependencies": {
     "b64-to-blob": "^1.2.19",
@@ -25,8 +43,8 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.1",
-    "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/cli": "^16.0.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@fullhuman/postcss-purgecss": "3.0.0",
     "@mdi/js": "^6.2.95",
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -51,6 +69,7 @@
     "eslint-plugin-vue": "^7.19.1",
     "husky": "^7.0.2",
     "intersection-observer": "^0.12.0",
+    "lint-staged": "^12.1.4",
     "markdownlint-cli": "^0.29.0",
     "netlify-cli": "^6.10.3",
     "npm-run-all": "^4.1.5",
@@ -66,12 +85,5 @@
     "vue-template-compiler": "^2.6.14",
     "workbox-webpack-plugin": "^6.3.0",
     "workbox-window": "^6.3.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog",
-      "disableScopeLowerCase": true,
-      "disableSubjectLowerCase": true
-    }
   }
 }
