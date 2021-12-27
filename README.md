@@ -4,10 +4,10 @@
 <div align="center">
   <h2 align="center">🎨 Mod3D</h2>
   <p align="center">
-    A simple 3D editor, that allows you to wrap a 3D model into a texture. As a
-    texture there could be used
+    A simple 3D editor, that allows wrapping a 3D model into a texture. As a
+    texture, there could be used
     <a href="https://en.wikipedia.org/wiki/UV_mapping" aria-label="UV mapping">
-    UV mappings</a>, images or figures.
+    UV mappings</a>, images, or figures.
   </p>
 
   <p id="shields" align="center" markdown="1">
