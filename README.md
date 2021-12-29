@@ -34,7 +34,7 @@
 
 ---
 
-## :tada: Features
+## 🎉 Features
 
 - [Single Page Application (SPA)][mdn-spa] &ndash; is presented to the user
 through a single HTML page to be more responsive and to more closely replicate
@@ -57,7 +57,7 @@ touches at the same time in any place of the scene)
 [IndexedDB][mdn-indexeddb], [LQIP][github-lqip] placeholders, a
 [tool][github-purgecss] to remove unused CSS
 
-## :hammer_and_wrench: Tech Stack
+## 🛠️ Tech Stack
 
 <!-- markdownlint-disable MD013 -->
 [![EditorConfig](https://img.shields.io/badge/EditorConfig-FEFEFE?logo=editorconfig&logoColor=000&style=flat)][editorconfig]
@@ -95,9 +95,9 @@ touches at the same time in any place of the scene)
 [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff&style=flat)][github-actions]
 <!-- markdownlint-enable MD013 -->
 
-## :writing_hand: Contributing
+## ✍️ Contributing
 
-:+1::tada: *First off, thanks for taking the time to contribute!* :tada::+1:
+👍🎉 *First off, thanks for taking the time to contribute!* 🎉👍
 
 Contributions are what make the open source community such an amazing place to
 be learn, inspire, and create. Any contributions you make are **greatly
@@ -111,11 +111,11 @@ appreciated**.
 5. Push to the *Branch* (`git push origin feature/awesome-feature`)
 6. Open a *Pull Request*
 
-## :sparkling_heart: Like this project ?
+## 💖 Like this project ?
 
-Leave a :star: if you think this project is cool or useful for you.
+Leave a ⭐ if you think this project is cool or useful for you.
 
-## :warning: License
+## ⚠️ License
 
 `Mod3D` is licenced under the MIT License. See the [LICENSE](LICENSE) for more information.
 
