@@ -32,8 +32,6 @@
   </div>
 </div>
 
----
-
 ## 🎉 Features
 
 - [Single Page Application (SPA)][mdn-spa] &ndash; is presented to the user
